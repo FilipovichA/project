@@ -245,4 +245,8 @@ target_wrapper.*
 *.xdv
 *.xdy
 *.tdo
-
+CMakeLists.txt.user
+.gitlab-ci.yml
+..gitignore.kate-swp
+_build/
+.git/
