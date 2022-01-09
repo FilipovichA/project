@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "DataBaseWork.hpp"
+
 namespace Ui {
 
 class Form;

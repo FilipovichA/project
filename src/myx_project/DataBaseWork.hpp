@@ -12,9 +12,9 @@
 class DataBaseWork
 {
 public:
-	DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString password );
+	DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString& password );
 	bool connect();
-	bool insert( QString id, QString col1, QString col2 );
+	bool insert( const QString& id, const QString& col1, const QString& col2 );
 	QString select();
 private:
 	QSqlDatabase db;

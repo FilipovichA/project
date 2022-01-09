@@ -22,7 +22,8 @@ set(MYX_CMAKE_AUTHOR_EMAIL "sasha_filipovich_00@mail.ru" CACHE STRING "")
 
 # Краткое описание проекта
 set(MYX_CMAKE_DESCRIPTION "myx" CACHE STRING "")
-
+set(-DCMAKE_C_COMPILER=gcc)
+set(-DCMAKE_CXX_COMPILER=g++)
 
 find_package(MyxCMake 0.4.2 REQUIRED)
 find_package(Qt5Core COMPONENTS Private REQUIRED)
@@ -41,3 +42,4 @@ myx_cmake_generate_private_config_header()
 myx_cmake_generate_git_info_header()
 add_subdirectory(src/myx_project)
 myx_cmake_doc_doxygen(LATEX YES HTML YES)
+

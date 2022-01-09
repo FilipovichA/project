@@ -64,3 +64,7 @@ target_include_directories(${TRGT} SYSTEM PUBLIC ${Qt5Sql_INCLUDE_DIRS})
 # Qt5: подключение библиотек
 target_link_libraries(${TRGT} Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Sql)
 myx_cmake_common_target_properties(${TRGT})
+
+myx_cmake_common_target_properties_post_link(${TRGT})
+
+

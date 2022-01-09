@@ -1,5 +1,5 @@
 #include "DataBaseWork.hpp"
-DataBaseWork::DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString password )
+DataBaseWork::DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString& password )
 {
 	db = QSqlDatabase::addDatabase( "QPSQL" );
 	db.setUserName( name );
@@ -24,7 +24,7 @@ bool DataBaseWork::connect()
 }
 
 
-bool DataBaseWork::insert( QString id, QString col1, QString col2 )
+bool DataBaseWork::insert( const QString& id, const QString& col1, const QString& col2 )
 {
 	QSqlQuery query;
 	query.prepare( "INSERT INTO tabl (id,col1,col2)"
@@ -49,7 +49,7 @@ QString DataBaseWork::select()
 	if ( !query.exec() )
 	{
 		qDebug() << "failed";
-		return( 0 );
+		return( nullptr );
 	}
 	else
 	{
