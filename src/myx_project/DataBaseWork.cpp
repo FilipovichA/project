@@ -1,5 +1,18 @@
+/*
+ *  @file    DataBaseWork.cpp
+ *  @brief   TODO
+ *  @details TODO
+ */
 #include "DataBaseWork.hpp"
-DataBaseWork::DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString& password )
+/*
+ *  @fn DataBaseWork::DataBaseWork
+ *  @param name TODO
+ *  @param host TODO
+ *  @param dbname TODO
+ *  @param password TODO
+ *  @return TODO
+ *  @details TODO
+ */DataBaseWork::DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString& password )
 {
 	db = QSqlDatabase::addDatabase( "QPSQL" );
 	db.setUserName( name );
@@ -9,7 +22,11 @@ DataBaseWork::DataBaseWork( const QString& name, const QString& host, const QStr
 }
 
 
-bool DataBaseWork::connect()
+/*
+ *  @fn DataBaseWork::connect
+ *  @return TODO
+ *  @details TODO
+ */bool DataBaseWork::connect()
 {
 	if ( !db.open() )
 	{
@@ -24,7 +41,14 @@ bool DataBaseWork::connect()
 }
 
 
-bool DataBaseWork::insert( const QString& id, const QString& col1, const QString& col2 )
+/*
+ *  @fn DataBaseWork::insert
+ *  @param id TODO
+ *  @param col1 TODO
+ *  @param col2 TODO
+ *  @return TODO
+ *  @details TODO
+ */bool DataBaseWork::insert( const QString& id, const QString& col1, const QString& col2 )
 {
 	QSqlQuery query;
 	query.prepare( "INSERT INTO tabl (id,col1,col2)"
@@ -42,7 +66,11 @@ bool DataBaseWork::insert( const QString& id, const QString& col1, const QString
 }
 
 
-QString DataBaseWork::select()
+/*
+ *  @fn DataBaseWork::select
+ *  @return TODO
+ *  @details TODO
+ */QString DataBaseWork::select()
 {
 	QSqlQuery query;
 	query.prepare( "select id,col1,col2 from tabl;" );
@@ -64,3 +92,6 @@ QString DataBaseWork::select()
 		return( line );
 	}
 } // DataBaseWork::select
+
+
+// EOF DataBaseWork.cpp

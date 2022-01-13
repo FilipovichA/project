@@ -1,3 +1,8 @@
+/*
+ *  @file    DataBaseWork.hpp
+ *  @brief   TODO
+ *  @details TODO
+ */
 #ifndef DataBaseWork_HPP
 #define DataBaseWork_HPP
 #include <QString>
@@ -9,7 +14,11 @@
 #include <QSqlError>
 #include <QFile>
 #include <QTextStream>
-class DataBaseWork
+/*
+ *  @class   DataBaseWork
+ *  @brief   TODO
+ *  @details TODO
+ */class DataBaseWork
 {
 public:
 	DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString& password );
@@ -20,3 +29,4 @@ private:
 	QSqlDatabase db;
 };
 #endif // DataBaseWork_HPP
+// EOF DataBaseWork.hpp

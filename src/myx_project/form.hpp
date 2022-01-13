@@ -1,3 +1,8 @@
+/*
+ *  @file    form.hpp
+ *  @brief   TODO
+ *  @details TODO
+ */
 #ifndef FORM_HPP
 #define FORM_HPP
 
@@ -10,6 +15,11 @@ class Form;
 
 } // namespace Ui
 
+/*
+ *  @class   Form
+ *  @brief   TODO
+ *  @details TODO
+ */
 class Form : public QWidget
 {
 	Q_OBJECT
@@ -23,8 +33,10 @@ private slots:
 
 	void on_pushButton_2_clicked();
 
+
 private:
 	Ui::Form* ui;
-};
+}; // class Form
 
 #endif // FORM_HPP
+// EOF form.hpp

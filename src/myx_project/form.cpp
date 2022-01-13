@@ -1,8 +1,18 @@
+/*
+ *  @file    form.cpp
+ *  @brief   TODO
+ *  @details TODO
+ */
 #include "form.hpp"
 #include "ui_form.h"
 
 
-Form::Form( QWidget* parent ) :
+/*
+ *  @fn Form::Form
+ *  @param parent TODO
+ *  @return TODO
+ *  @details TODO
+ */Form::Form( QWidget* parent ) :
 	QWidget( parent ),
 	ui     ( new Ui::Form )
 {
@@ -10,17 +20,25 @@ Form::Form( QWidget* parent ) :
 }
 
 
-Form::~Form()
+/*
+ *  @fn $(fclass)::~Form
+ *  @return TODO
+ *  @details TODO
+ */Form::~Form()
 {
 	delete ui;
 }
 
 
 DataBaseWork database_work( "sasha", "localhost", "bd", "2882" );
-void Form::on_pushButton_clicked()
+/*
+ *  @fn Form::on_pushButton_clicked
+ *  @return TODO
+ *  @details TODO
+ */void Form::on_pushButton_clicked()
 {
 	database_work.connect();
-	QFile inputFile( ui->lineEdit->text() );     //"/home/sasha/myx_project/src/test_project_myx/table1.csv"
+	QFile inputFile( ui->lineEdit->text() );
 	if ( !inputFile.open( QFile::ReadOnly ) )
 	{
 		qDebug() << "error";
@@ -39,10 +57,14 @@ void Form::on_pushButton_clicked()
 }
 
 
-void Form::on_pushButton_2_clicked()
+/*
+ *  @fn Form::on_pushButton_2_clicked
+ *  @return TODO
+ *  @details TODO
+ */void Form::on_pushButton_2_clicked()
 {
 	database_work.connect();
-	QFile outputFile1( ui->lineEdit_2->text() ); //"/home/sasha/myx_project/src/test_project_myx/table2.csv"
+	QFile outputFile1( ui->lineEdit_2->text() );
 	QString lines;
 	if ( !outputFile1.open( QFile::WriteOnly ) )
 	{
@@ -53,3 +75,6 @@ void Form::on_pushButton_2_clicked()
 	stream << lines;
 	outputFile1.close();
 }
+
+
+// EOF form.cpp
