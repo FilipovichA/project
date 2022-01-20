@@ -1,7 +1,7 @@
 /*
- *  @file    DataBaseWork.hpp
- *  @brief   TODO
- *  @details TODO
+ * @file DataBaseWork.hpp
+ * @brief TODO
+ * @details TODO
  */
 #ifndef DataBaseWork_HPP
 #define DataBaseWork_HPP
@@ -15,18 +15,20 @@
 #include <QFile>
 #include <QTextStream>
 /*
- *  @class   DataBaseWork
- *  @brief   TODO
- *  @details TODO
- */class DataBaseWork
+ * @class DataBaseWork
+ * @brief TODO
+ * @details TODO
+ */
+class DataBaseWork
 {
+	//объявление методов класса DataBaseWork
 public:
-	DataBaseWork( const QString& name, const QString& host, const QString& dbname, const QString& password );
-	bool connect();
+	bool connect( const QString& name, const QString& host, const QString& dbname, const QString& password );
 	bool insert( const QString& id, const QString& col1, const QString& col2 );
 	QString select();
 private:
 	QSqlDatabase db;
 };
-#endif // DataBaseWork_HPP
+#endif // ifndef DataBaseWork_HPP
+// DataBaseWork_HPP
 // EOF DataBaseWork.hpp

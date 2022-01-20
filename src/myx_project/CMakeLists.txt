@@ -9,18 +9,21 @@ set(TRGT myx_project)
 set(TRGT_cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/DataBaseWork.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/form.cpp)
+${CMAKE_CURRENT_SOURCE_DIR}/form.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/dbconnect.cpp)
 # Заголовочные файлы, для которых необходима обработка препроцессором moc
 # (содержат класс, унаследованный от QObject, использующий сигналы и/или слоты)
 set(TRGT_moc_hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/DataBaseWork.hpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/form.hpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/form.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/dbconnect.hpp)
 # Другие заголовочные файлы
 set(TRGT_hpp)
 
 # Файлы с описанием графического интерфейса для Qt
 set(TRGT_ui
-${CMAKE_CURRENT_SOURCE_DIR}/form.ui)
+${CMAKE_CURRENT_SOURCE_DIR}/form.ui
+${CMAKE_CURRENT_SOURCE_DIR}/dbconnect.ui)
 # Файлы описания ресурсов, включаемых в исполняемый файл
 set(TRGT_qrc
   ${CMAKE_SOURCE_DIR}/files/share/icon.qrc)
